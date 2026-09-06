@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
+  <style>
+    body {
+      font-size: 16px;
+      color: black;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 24px;
+    }
+
+    .container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        font-size: 14px;
+        color: blue;
+      }
+      .container {
+        grid-template-columns: repeat(2, 1fr); 
+      }
+    }
+
+    @media (min-width: 1200px) {
+      body {
+        font-size: 20px;
+        color: red;
+      }
+      .container {
+        grid-template-columns: repeat(4, 1fr); 
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p>I am Batman</p>
+  <div class="container">
+    <img src="fa_285000000_lamborghini-urus-2018-front-view_4x.png" alt="Cute rabbit 1">
+    <img src="lamborghini-urus-performante-black-matte-side-profile.webp" alt="Cute rabbit 2">
+    <img src="JuiceXRimac.jpg" alt="Cute rabbit 3">
+    <img src="LAMBORGHINI_URUS_PERFORMANTE_08.jpg" alt="Cute rabbit 4">
+  </div>
+</body>
+
+</html>
