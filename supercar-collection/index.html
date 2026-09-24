@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supercar Collection</title>
+  <!-- CSS file for all the styling -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation bar (shown on every page) ===== -->
+  <header class="navbar">
+    <span class="site-name">Supercar Collection</span>
+    <nav>
+      <a href="#" onclick="showPage('home'); return false;">Home</a>
+      <a href="#" onclick="showPage('home'); return false;">Car Brands</a>
+      <a href="#" onclick="showPage('about'); return false;">About</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE 1: Home (brand cards are added here by JavaScript) ===== -->
+    <section id="home-page" class="page">
+      <h1>Supercar Collection</h1>
+      <p class="intro">Explore some of the most famous supercar brands and their cars.</p>
+      <div id="brand-grid" class="grid"></div>
+    </section>
+
+    <!-- ===== PAGE 2: Cars of one brand (filled by JavaScript) ===== -->
+    <section id="cars-page" class="page hidden">
+      <button class="back-btn" onclick="showPage('home')">&larr; Back to Home</button>
+      <h2 id="brand-title"></h2>
+      <div id="car-grid" class="grid"></div>
+    </section>
+
+    <!-- ===== PAGE 3: Details of one car (filled by JavaScript) ===== -->
+    <section id="details-page" class="page hidden">
+      <button class="back-btn" onclick="backToCars()">&larr; Back to Cars</button>
+      <div id="car-details"></div>
+    </section>
+
+    <!-- ===== PAGE 4: About ===== -->
+    <section id="about-page" class="page hidden">
+      <h2>About</h2>
+      <p>
+        This is a simple college assignment website about supercars.
+        It shows 4 famous car brands: Ferrari, Lamborghini, Bugatti and McLaren.
+        Every brand has 4 cars, so there are 16 cars in total.
+      </p>
+      <p>
+        The website is made with plain HTML, CSS and JavaScript.
+        All the brand and car information is stored in JavaScript arrays,
+        so the same HTML code does not need to be written again and again.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Supercar Collection - college assignment project</p>
+  </footer>
+
+  <!-- JavaScript file for the pages, the data and the buttons -->
+  <script src="js/script.js"></script>
+</body>
+</html>

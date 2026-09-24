@@ -1,0 +1,208 @@
+/* =====================================
+   Supercar Collection - stylesheet
+   ===================================== */
+
+/* Basic reset so all browsers look the same */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1b1d22;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+/* ----- Navigation bar ----- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #24262d;
+  padding: 14px 24px;
+}
+
+.site-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar nav a {
+  color: #cccccc;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.navbar nav a:hover {
+  color: #ffffff;
+}
+
+/* ----- Pages ----- */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 24px 50px;
+}
+
+.page h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.page h2 {
+  font-size: 24px;
+  margin: 10px 0 20px;
+}
+
+.intro {
+  color: #b8b8b8;
+  margin-bottom: 26px;
+}
+
+/* Hides a page (section) that is not active */
+.hidden {
+  display: none;
+}
+
+/* ----- Card grid (used for brands and cars) ----- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #24262d;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 14px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-block;
+  background-color: #b3202c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d92b3a;
+}
+
+.back-btn {
+  background: none;
+  color: #cccccc;
+  border: 1px solid #565a64;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.back-btn:hover {
+  color: #ffffff;
+  border-color: #999999;
+}
+
+/* ----- Car details page ----- */
+#car-details img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.info {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 16px;
+}
+
+.info th,
+.info td {
+  border: 1px solid #3a3d45;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.info th {
+  background-color: #24262d;
+  color: #cccccc;
+  width: 110px;
+}
+
+.car-desc {
+  color: #cccccc;
+  max-width: 650px;
+}
+
+/* ----- About page ----- */
+#about-page p {
+  max-width: 650px;
+  color: #cccccc;
+  margin-bottom: 12px;
+}
+
+/* ----- Footer ----- */
+.footer {
+  text-align: center;
+  padding: 18px;
+  color: #8a8d95;
+  font-size: 13px;
+  border-top: 1px solid #2b2e35;
+}
+
+/* ----- Small screens (mobile) ----- */
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar nav a {
+    margin: 0 10px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  #car-details img {
+    max-height: 260px;
+  }
+}
